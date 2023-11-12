@@ -1,16 +1,11 @@
 export const fromBufferToBigInt = (buffer: Buffer, little = true, signed = false): bigint => {
-  let randBuffer = Buffer.from(buffer)
+  const target = little ? buffer.reverse() : buffer
+  const bytes = target.length
 
-  const bytesNumber = randBuffer.length
+  const bigInt = BigInt(`0x${target.toString('hex')}`)
 
-  if (little) {
-    randBuffer = randBuffer.reverse()
-  }
-
-  const bigInt = BigInt(`0x${randBuffer.toString('hex')}`)
-
-  if (signed && Math.floor(bigInt.toString(2).length / 8) >= bytesNumber) {
-    return bigInt - BigInt(2) ** BigInt(bytesNumber * 8)
+  if (signed && Math.floor(bigInt.toString(2).length / 8) >= bytes) {
+    return bigInt - BigInt(2) ** BigInt(bytes * 8)
   }
 
   return bigInt
