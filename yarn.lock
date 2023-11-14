@@ -1103,9 +1103,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@monstrs/bigint-utils@workspace:0.0.1, @monstrs/bigint-utils@workspace:packages/bigint-utils":
+  version: 0.0.0-use.local
+  resolution: "@monstrs/bigint-utils@workspace:packages/bigint-utils"
+  languageName: unknown
+  linkType: soft
+
 "@monstrs/buffer-utils@workspace:packages/buffer-utils":
   version: 0.0.0-use.local
   resolution: "@monstrs/buffer-utils@workspace:packages/buffer-utils"
+  dependencies:
+    "@jest/globals": "npm:^29.7.0"
+    "@monstrs/bigint-utils": "workspace:0.0.1"
+    "@types/node": "npm:^20.9.0"
   languageName: unknown
   linkType: soft
 
@@ -1168,6 +1178,14 @@ __metadata:
   checksum: 82f4549e5cb340a28034541d8212a929aeab6187f87d54443a734fd530a5ef13e75bd1b417ce9db0de1a791b3b8c92caf83aa451b2cab9dda4862826f77e1116
   languageName: node
   linkType: hard
+
+"@monstrs/crypto-utils@workspace:packages/crypto-utils":
+  version: 0.0.0-use.local
+  resolution: "@monstrs/crypto-utils@workspace:packages/crypto-utils"
+  dependencies:
+    "@jest/globals": "npm:^29.7.0"
+  languageName: unknown
+  linkType: soft
 
 "@monstrs/jest-resolver@npm:0.3.3":
   version: 0.3.3
@@ -1539,6 +1557,15 @@ __metadata:
   version: 20.5.9
   resolution: "@types/node@npm:20.5.9"
   checksum: a071a19019b4045ba65cbacb3a24fcdf1ef41474fd15fb160a082a4c7aba7643b69c5d681637d2b0ce081f2127ce4332ea4d8bf007595efe8e82ba795872c7d0
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^20.9.0":
+  version: 20.9.0
+  resolution: "@types/node@npm:20.9.0"
+  dependencies:
+    undici-types: "npm:~5.26.4"
+  checksum: 755d07de735eafda4e20af75ad9d03bdbfddef327d790e9a896142eac7493db5d8501591376e1c8227aa12eeb88e522bc727c6024504842ed40e539e8a466db9
   languageName: node
   linkType: hard
 
@@ -7013,6 +7040,13 @@ __metadata:
     has-symbols: "npm:^1.0.3"
     which-boxed-primitive: "npm:^1.0.2"
   checksum: 81ca2e81134167cc8f75fa79fbcc8a94379d6c61de67090986a2273850989dd3bae8440c163121b77434b68263e34787a675cbdcb34bb2f764c6b9c843a11b66
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~5.26.4":
+  version: 5.26.5
+  resolution: "undici-types@npm:5.26.5"
+  checksum: bb673d7876c2d411b6eb6c560e0c571eef4a01c1c19925175d16e3a30c4c428181fb8d7ae802a261f283e4166a0ac435e2f505743aa9e45d893f9a3df017b501
   languageName: node
   linkType: hard
 
