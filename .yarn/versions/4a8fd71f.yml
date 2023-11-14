@@ -1,0 +1,4 @@
+releases:
+  "@monstrs/bigint-utils": patch
+  "@monstrs/buffer-utils": patch
+  "@monstrs/crypto-utils": patch
