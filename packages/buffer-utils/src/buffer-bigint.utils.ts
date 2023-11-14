@@ -95,3 +95,10 @@ export const fromBigIntToSignedLittleBuffer = (value: bigint, number = 0): Buffe
 
   return Buffer.from(byteArray)
 }
+
+export const fromBigIntToByteArrayBuffer = (target: bigint, signed = false): Buffer => {
+  const bits = target.toString(2).length
+  const byteLength = Math.floor((bits + 8 - 1) / 8)
+
+  return fromBigIntToBuffer(target, byteLength, false, signed)
+}
