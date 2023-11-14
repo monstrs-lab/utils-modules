@@ -14,14 +14,24 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:."\
     },\
     {\
+      "name": "@monstrs/bigint-utils",\
+      "reference": "workspace:packages/bigint-utils"\
+    },\
+    {\
       "name": "@monstrs/buffer-utils",\
       "reference": "workspace:packages/buffer-utils"\
+    },\
+    {\
+      "name": "@monstrs/crypto-utils",\
+      "reference": "workspace:packages/crypto-utils"\
     }\
   ],\
   "enableTopLevelFallback": true,\
   "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
   "fallbackExclusionList": [\
+    ["@monstrs/bigint-utils", ["workspace:packages/bigint-utils"]],\
     ["@monstrs/buffer-utils", ["workspace:packages/buffer-utils"]],\
+    ["@monstrs/crypto-utils", ["workspace:packages/crypto-utils"]],\
     ["utils-modules", ["workspace:."]]\
   ],\
   "fallbackPool": [\
@@ -1583,11 +1593,23 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@monstrs/bigint-utils", [\
+      ["workspace:packages/bigint-utils", {\
+        "packageLocation": "./packages/bigint-utils/",\
+        "packageDependencies": [\
+          ["@monstrs/bigint-utils", "workspace:packages/bigint-utils"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
     ["@monstrs/buffer-utils", [\
       ["workspace:packages/buffer-utils", {\
         "packageLocation": "./packages/buffer-utils/",\
         "packageDependencies": [\
-          ["@monstrs/buffer-utils", "workspace:packages/buffer-utils"]\
+          ["@monstrs/buffer-utils", "workspace:packages/buffer-utils"],\
+          ["@jest/globals", "npm:29.7.0"],\
+          ["@monstrs/bigint-utils", "workspace:packages/bigint-utils"],\
+          ["@types/node", "npm:20.9.0"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -1677,6 +1699,16 @@ const RAW_RUNTIME_STATE =
           ["@monstrs/config-typescript", "npm:0.3.6"]\
         ],\
         "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@monstrs/crypto-utils", [\
+      ["workspace:packages/crypto-utils", {\
+        "packageLocation": "./packages/crypto-utils/",\
+        "packageDependencies": [\
+          ["@monstrs/crypto-utils", "workspace:packages/crypto-utils"],\
+          ["@jest/globals", "npm:29.7.0"]\
+        ],\
+        "linkType": "SOFT"\
       }]\
     ]],\
     ["@monstrs/jest-resolver", [\
@@ -2209,6 +2241,14 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-node-npm-20.5.9-0b27ddedcc-a071a19019.zip/node_modules/@types/node/",\
         "packageDependencies": [\
           ["@types/node", "npm:20.5.9"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:20.9.0", {\
+        "packageLocation": "./.yarn/cache/@types-node-npm-20.9.0-d5b5fa6634-755d07de73.zip/node_modules/@types/node/",\
+        "packageDependencies": [\
+          ["@types/node", "npm:20.9.0"],\
+          ["undici-types", "npm:5.26.5"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -8591,6 +8631,15 @@ const RAW_RUNTIME_STATE =
           ["has-bigints", "npm:1.0.2"],\
           ["has-symbols", "npm:1.0.3"],\
           ["which-boxed-primitive", "npm:1.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["undici-types", [\
+      ["npm:5.26.5", {\
+        "packageLocation": "./.yarn/cache/undici-types-npm-5.26.5-de4f7c7bb9-bb673d7876.zip/node_modules/undici-types/",\
+        "packageDependencies": [\
+          ["undici-types", "npm:5.26.5"]\
         ],\
         "linkType": "HARD"\
       }]\
