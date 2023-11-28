@@ -1,3 +1,6 @@
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-bitwise */
+
 import { compare } from './compare.utils.js'
 
 export const integerLogarithm = (value: bigint, base: bigint): { p: bigint; e: number } => {
@@ -23,4 +26,25 @@ export const getBitLength = (value: bigint): bigint => {
   }
 
   return BigInt(integerLogarithm(target, BigInt(2)).e) + BigInt(1)
+}
+
+export const mod = (n: bigint, m: bigint): bigint => ((n % m) + m) % m
+
+export const pow = (x: bigint, y: bigint, z?: bigint): bigint => {
+  if (z === undefined) {
+    return x ** y
+  }
+
+  let result = BigInt(1)
+
+  while (y > BigInt(0)) {
+    if (mod(y, BigInt(2)) === BigInt(1)) {
+      result = mod(result * x, z)
+    }
+
+    y >>= BigInt(1)
+    x = mod(x * x, z)
+  }
+
+  return result
 }
