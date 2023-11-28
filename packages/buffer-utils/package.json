@@ -1,6 +1,6 @@
 {
   "name": "@monstrs/buffer-utils",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -17,7 +17,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@monstrs/bigint-utils": "workspace:0.0.2"
+    "@monstrs/bigint-utils": "workspace:0.0.3"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
