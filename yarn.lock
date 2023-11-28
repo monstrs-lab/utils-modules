@@ -1103,7 +1103,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@monstrs/bigint-utils@workspace:0.0.2, @monstrs/bigint-utils@workspace:packages/bigint-utils":
+"@monstrs/bigint-utils@workspace:0.0.3, @monstrs/bigint-utils@workspace:packages/bigint-utils":
   version: 0.0.0-use.local
   resolution: "@monstrs/bigint-utils@workspace:packages/bigint-utils"
   languageName: unknown
@@ -1114,7 +1114,7 @@ __metadata:
   resolution: "@monstrs/buffer-utils@workspace:packages/buffer-utils"
   dependencies:
     "@jest/globals": "npm:^29.7.0"
-    "@monstrs/bigint-utils": "workspace:0.0.2"
+    "@monstrs/bigint-utils": "workspace:0.0.3"
     "@types/node": "npm:^20.9.0"
   languageName: unknown
   linkType: soft
